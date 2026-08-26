@@ -516,15 +516,14 @@ licenses and notices associated with all included dependencies.
 The inclusion of third-party JAR files does not imply that those libraries
 are part of this project's source code.
 
-Repository
+#Repository
 
 Source code and project files are available at:
 
 https://github.com/jaswpratt/ConvertWord2Pdf
 
 Author
-
-J. Pratt
+Sabine
 
 License
 
@@ -533,9 +532,3 @@ This project is provided as a demonstration/example project.
 Unless otherwise specified, users should review the repository contents and
 the licenses of all included third-party dependencies before using or
 redistributing the project.
-
-
-One small point: I deliberately **didn't put the 50-JAR inventory into the README**. Since your `pom.xml` now has only the two top-level docx4j dependencies, Maven is the authoritative source for the transitive dependency set. Your repository currently has a `lib` directory as well, so the README's offline procedure explains how to generate that directory from Maven rather than maintaining a potentially stale hand-written list. 
-
-
-Also, your current `WordToPdf.java` still doesn't close its `FileOutputStream`; I'd fix that before your next commit. 
