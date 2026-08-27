@@ -34,9 +34,7 @@ public class WordToPdf {
     public static void main(String[] args) throws Exception {
 
         if (convert("documents/The Crimson Worm.docx", "documents/The Crimson Worm.pdf")) {
-
             System.out.println("Successfully created a PDF!!!");
-
         } else {
             System.out.println("Failed to create a PDF!!!");
         }
@@ -54,21 +52,15 @@ public class WordToPdf {
      *
      * @throws Exception if the input DOCX cannot be loaded
      */
-    public static boolean convert(String inputDocx, String outputPdf)
-            throws Exception {
+    public static boolean convert(String inputDocx, String outputPdf) throws Exception {
 
         // Load the DOCX document.
-        WordprocessingMLPackage wordMLPackage =
-                WordprocessingMLPackage.load(new File(inputDocx));
+        WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.load(new File(inputDocx));
 
         // Convert the DOCX directly to PDF.
-        try (FileOutputStream outputStream =
-                new FileOutputStream(outputPdf)) {
-
+        try (FileOutputStream outputStream = new FileOutputStream(outputPdf)) {
             Docx4J.toPDF(wordMLPackage, outputStream);
-
             return true;
-
         } catch (Exception e) {
             return false;
         }
