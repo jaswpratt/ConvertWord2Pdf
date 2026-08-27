@@ -36,9 +36,9 @@ public class WordToPdf {
     public static void main(String[] args) throws Exception {
        
        if (convert("documents/2025 Performance & Career Conversation_jwp.docx", "documents/2025 Performance & Career Conversation_jwp.pdf")) {
-    	  System.out.println("Successfully created a PDF!!!");   
+         System.out.println("Successfully created a PDF!!!");   
        } else {
-    	   System.out.println("Failed to create a PDF!!!");
+          System.out.println("Failed to create a PDF!!!");
        }
     }
     
@@ -75,11 +75,11 @@ public class WordToPdf {
 
         // Write PDF
         try {
-        	FileOutputStream outputStream = new FileOutputStream(outputPdf); 
+           FileOutputStream outputStream = new FileOutputStream(outputPdf); 
             conversion.output(outputStream, pdfSettings);
             success = true;
         } catch (Exception e) {
-        	return false;
+           return false;
         }
         
         return success;
