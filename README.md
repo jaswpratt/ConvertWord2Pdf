@@ -1,12 +1,4 @@
 # ConvertWord2Pdf
-Java Demo - To Convert a Word Document
-
-Certainly. Here is a complete README.md you can copy directly into the repository. I based it on the current repository structure, pom.xml, and WordToPdf.java. 
-G
-GitHub
-+2
-
-# ConvertWord2Pdf
 
 A simple Java demonstration project for converting Microsoft Word
 DOCX documents to PDF using [docx4j](https://www.docx4java.org/).
